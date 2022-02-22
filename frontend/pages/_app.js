@@ -1,10 +1,8 @@
-import CssBaseline from '@mui/material/CssBaseline';
-import Layout from '../components/layout'
+import Layout from './container/Layout'
 
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      <CssBaseline/>
       <Component {...pageProps} />
     </Layout>
     )
