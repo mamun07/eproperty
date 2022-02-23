@@ -1,6 +1,8 @@
 import React from 'react'
 import Slider from "react-slick";
-import {Container, Typography} from '@mui/material';
+import Image from 'next/image'
+import {Box} from '@mui/material';
+import Banner1 from '../../public/images/banner1.jpg'
 
 export default function Sliders() {
     var settings = {
@@ -12,6 +14,7 @@ export default function Sliders() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
+        pauseOnHover:false,
         responsive: [
           {
             breakpoint: 1024,
@@ -38,12 +41,19 @@ export default function Sliders() {
         ]
     };
   return (
-    <Container maxWidth='xl'>
-      <Slider {...settings}>
-        <Typography variant='h3'> Banner 1 </Typography>
-        <Typography variant='h3'> Banner 2 </Typography>
-        <Typography variant='h3'> Banner 3 </Typography>
-      </Slider>
-    </Container>
+    <Slider {...settings}>
+      <Box>
+        <Image src={Banner1} alt="Banner one"/>
+      </Box>
+      <Box>
+        <Image src={Banner1} alt="Banner Two"/>
+      </Box>
+      <Box>
+        <Image src={Banner1} alt="Banner Three"/>
+      </Box>
+      <Box>
+        <Image src={Banner1} alt="Banner Four"/>
+      </Box>
+    </Slider>
   )
 }
